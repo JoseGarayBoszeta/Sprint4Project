@@ -6,7 +6,7 @@ import altair as alt
 vehi_us = pd.read_csv('./vehicles_us.csv')
 print(vehi_us)
 
-st.header('Used Car listings in the USA (2018-19)', divider='rainbow')
+st.header('Used Car listings in the USA (2018-19)')
 st.markdown("An analysis of a dataframe containing 51525 used car listings for the period 2018-05-01 to 2019-04-19.")
 st.write(vehi_us)
 
