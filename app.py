@@ -20,8 +20,10 @@ fig = px.histogram(vehi_us, x='odometer', title='Histogram of odometer readings'
                    )
 
 odo_mean = vehi_us['odometer'].mean()
+price_mean = vehi_us['price'].mean()
 st.write(fig)
-st.write("The mean odometer reading is:", f"{odo_mean:.2f}")
+st.write("The average odometer reading is:", f"{odo_mean:.2f}", "miles")
+st.write("The average price is:", f"{price_mean:.2f}", "US dollars")
 
 fig = px.scatter(vehi_us, x='price', y='odometer')
 fig.update_traces(marker=dict(size=3, opacity=0.3, line=dict(width=1, color='blue')))
