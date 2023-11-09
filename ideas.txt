@@ -11,4 +11,4 @@ App8 - Classification Penguins
 App9 - Regression Boston Housing Data
 App10 - Regression Bioinformatics Solubility Data
 App11 - Deploy to Heroku
-App12 - Deploy to Streamlit Sharing
+App12 - Deploy to Streamlit
