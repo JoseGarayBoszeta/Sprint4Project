@@ -52,7 +52,7 @@ vehi_us = extract_car_maker(vehi_us, car_makers)
 # Create dataframe with car maker counts
 brands = vehi_us['car_maker'].value_counts().reset_index()
 # Car maker bar chart in plotly express
-fig = px.bar(brands, x='car_maker', y='count', title='Bar Chart Example')
+fig = px.bar(brands, x='car_maker', y='count', title='Car maker brands by popularity')
 fig.update_traces(marker_color='green', marker_line_color='black', marker_line_width=2)
 fig.update_xaxes(title_text='Car Maker Brands', tickangle=45, tickfont=dict(size=14))
 fig.update_yaxes(title_text='Count', title_font=dict(size=16))
