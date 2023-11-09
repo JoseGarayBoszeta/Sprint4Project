@@ -1,7 +1,6 @@
 import pandas as pd
 import streamlit as st
 import plotly.express as px
-import altair as alt
 
 vehi_us = pd.read_csv('./vehicles_us.csv')
 print(vehi_us)
