@@ -50,21 +50,20 @@ def extract_car_maker(vehi_us, car_makers):
 # Call the function to add the Car_Maker column
 vehi_us = extract_car_maker(vehi_us, car_makers)
 
-# Create a df with car_maker counts
+# Create dataframe with car maker counts
 brands = vehi_us['car_maker'].value_counts().reset_index()
-# Create an altair chart for car_maker counts
-chart = alt.Chart(brands).mark_bar().encode(
-    x=alt.X('car_maker:N', title='Car Maker'),  # Customize the x-axis label
-    y=alt.Y('count:Q', title='Count'),         # Customize the y-axis label
-    color=alt.value('steelblue'),              # Change the bar color
-    tooltip=['car_maker:N', 'count:Q'],       # Show additional information on hover
-).properties(
-    title='Car brands by popularity in the USA',               # Add a title to the chart
-    width=800,                                 # Set the width of the chart
-    height=600                                 # Set the height of the chart
-).configure_axis(labelFontSize=14)
-
+# Car maker bar chart in plotly express
+fig = px.bar(brands, x='car_maker', y='count', title='Bar Chart Example')
+fig.update_traces(marker_color='green', marker_line_color='black', marker_line_width=2)
+fig.update_xaxes(title_text='Car Maker Brands', tickangle=45, tickfont=dict(size=14))
+fig.update_yaxes(title_text='Count', title_font=dict(size=16))
+fig.update_layout(
+    title_font=dict(size=24),
+    title_x=0.5,
+    barmode='group',
+    bargap=0.2
+)
 # add checkbox to display car brands count info:
 check = st.checkbox("Click here to see car brands by popularity")
 if check:
-    st.write(chart, brands)
+    st.write(fig, brands)
