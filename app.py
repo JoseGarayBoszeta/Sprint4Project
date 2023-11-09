@@ -65,4 +65,4 @@ fig.update_layout(
 # add checkbox to display car brands count info:
 check = st.checkbox("Click here to see car brands by popularity")
 if check:
-    st.write(fig)
+    st.write(fig, brands)
