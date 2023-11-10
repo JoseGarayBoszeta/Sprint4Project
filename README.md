@@ -8,4 +8,4 @@ Using Feature Engineering we created a function to extract the car maker brand f
 This project has been implemented on Streamlit and is available as a web application on https://sprint4project-6qar.onrender.com/<br>
 The source code can be found at https://github.com/JoseGarayBoszeta/Sprint4Project.git<br>
 To run on a local machine, download the repository and run app.py on Streamlit at the terminal<br>
--> Open terminal, go to the directory and type streamlit run app.py<br><br>
+-> Open terminal, go to the directory and type: streamlit run app.py<br><br>
