@@ -29,7 +29,6 @@ vehi_us = extract_car_maker(vehi_us, car_makers)
 brands = vehi_us['car_maker'].value_counts().reset_index()
 # Rename the columns for clarity
 brands.columns = ['maker', 'count']
-
 # Car maker bar chart in plotly express
 fig = px.bar(brands, x='maker', y='count', title='Car maker brands by popularity')
 fig.update_traces(marker_color='green', marker_line_color='black', marker_line_width=2)
@@ -40,11 +39,12 @@ fig.update_layout(
     title_x=0.5,
     barmode='group',
     bargap=0.2)
+st.write(fig, brands)
 
 #add checkbox to display car brands count info:
-check = st.checkbox("Click here to see car brands by popularity")
-if check:
-    st.write(fig, brands)
+#check = st.checkbox("Click here to see car brands by popularity")
+#if check:
+    #st.write(fig, brands)
 
 st.markdown("The most important factor in determining the value of a used car is odometer readings:")
 fig = px.histogram(vehi_us, x='odometer', title='Histogram of odometer readings',
