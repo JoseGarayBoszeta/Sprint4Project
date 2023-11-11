@@ -43,9 +43,9 @@ fig.update_layout(
 fig.show()
 
 # add checkbox to display car brands count info:
-check = st.checkbox("Click here to see car brands by popularity")
-if check:
-    st.write(fig, brands)
+#check = st.checkbox("Click here to see car brands by popularity")
+#if check:
+#    st.write(fig, brands)
 
 
 st.markdown("The most important factor in determining the value of a used car is odometer readings:")
